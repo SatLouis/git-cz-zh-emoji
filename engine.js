@@ -44,7 +44,7 @@ module.exports = function(options) {
   var length = longest(Object.keys(types)).length + 1;
   var choices = map(types, function(type, key) {
     return {
-      name: (key + ':').padEnd(length) + ' ' + type.description,
+      name: ((type.emoji ? type.emoji + ' ' : '') + key + ':').padEnd(length) + ' ' + type.description,
       value: key
     };
   });
@@ -202,8 +202,14 @@ module.exports = function(options) {
         var scope = answers.scope ? '(' + answers.scope + ')' : '';
 
         // Hard limit this line in the validate
-        var head = answers.type + scope + ': ' + answers.subject;
-
+        var head =
+          (types[answers.type] && types[answers.type].emoji
+            ? types[answers.type].emoji + ' '
+            : '') +
+          answers.type +
+          scope +
+          ': ' +
+          answers.subject;
         // Wrap these lines at options.maxLineWidth characters
         var body = answers.body ? wrap(answers.body, wrapOptions) : false;
 

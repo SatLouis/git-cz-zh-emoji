@@ -1,21 +1,33 @@
-# cz-conventional-changelog-zh(汉化版)
+# cz-conventional-changelog-zh-emoji(汉化Emoji版)
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/commitizen/cz-conventional-changelog-zh.svg)](https://greenkeeper.io/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/commitizen/cz-conventional-changelog-zh-emoji.svg)](https://greenkeeper.io/)
 
 Status:
-[![npm version](https://img.shields.io/npm/v/cz-conventional-changelog-zh.svg?style=flat-square)](https://www.npmjs.org/package/cz-conventional-changelog-zh)
-[![npm downloads](https://img.shields.io/npm/dm/cz-conventional-changelog-zh.svg?style=flat-square)](http://npm-stat.com/charts.html?package=cz-conventional-changelog-zh&from=2015-08-01)
-[![Build Status](https://img.shields.io/travis/commitizen/cz-conventional-changelog-zh.svg?style=flat-square)](https://travis-ci.org/commitizen/cz-conventional-changelog-zh)
+[![npm version](https://img.shields.io/npm/v/cz-conventional-changelog-zh-emoji.svg?style=flat-square)](https://www.npmjs.org/package/cz-conventional-changelog-zh-emoji)
+[![npm downloads](https://img.shields.io/npm/dm/cz-conventional-changelog-zh-emoji.svg?style=flat-square)](http://npm-stat.com/charts.html?package=cz-conventional-changelog-zh-emoji&from=2015-08-01)
+[![Build Status](https://img.shields.io/travis/commitizen/cz-conventional-changelog-zh-emoji.svg?style=flat-square)](https://travis-ci.org/commitizen/cz-conventional-changelog-zh-emoji)
 
-> 基于`cz-conventional-changelog`的基础修改的中文版，并扩展了一些日常工作中需要用到的提交类型
+> 基于`cz-conventional-changelog-zh`的基础修改的中文版，并扩展了一些日常工作中需要用到的提交类型
 
-Part of the [commitizen](https://github.com/commitizen/cz-cli) family. Prompts for [conventional changelog](https://github.com/conventional-changelog/conventional-changelog-zh) standard.
+Part of the [commitizen](https://github.com/commitizen/cz-cli) family. Prompts for [conventional changelog](https://github.com/conventional-changelog/conventional-changelog-zh-emoji) standard.
+
+## Install
+
+```
+yarn global add cz-conventional-changelog-zh-emoji
+```
+
 
 ## Configuration
 
+### 全局
+```
+echo '{ "path": "cz-conventional-changelog-zh-emoji" }' > ~/.czrc 
+```
+
 ### package.json
 
-与 commitizen 一样，您可以通过 `package.json` 的`config.commitizen`关键字来配置`cz-conventional-changelog-zh`。
+与 commitizen 一样，您可以通过 `package.json` 的`config.commitizen`关键字来配置`cz-conventional-changelog-zh-emoji`。
 
 ```json5
 {
@@ -26,7 +38,7 @@ Part of the [commitizen](https://github.com/commitizen/cz-cli) family. Prompts f
     },
     "config": {
         "commitizen": {
-            "path": "cz-conventional-changelog-zh", // 如有问题可以设置此路径:./node_modules/cz-conventional-changelog-zh
+            "path": "cz-conventional-changelog-zh-emoji", // 如有问题可以设置此路径:./node_modules/cz-conventional-changelog-zh-emoji
             "disableScopeLowerCase": false,
             "disableSubjectLowerCase": false,
             "maxHeaderWidth": 100,
@@ -73,47 +85,63 @@ Part of the [commitizen](https://github.com/commitizen/cz-cli) family. Prompts f
 {
   "feat": {
     "description": "一个新功能",
-    "title": "Features"
+    "title": "Features",
+    "emoji": ":sparkles:"
   },
   "fix": {
     "description": "一个bug",
-    "title": "Bug Fixes"
+    "title": "Bug Fixes",
+    "emoji": ":bug:"
   },
   "docs": {
     "description": "文档增删改",
-    "title": "Documentation"
+    "title": "Documentation",
+    "emoji": ":pencil:"
+  },
+  "delete": {
+    "description": "删除文件",
+    "title": "Delete Files",
+    "emoji": ":fire:"
   },
   "style": {
     "description": "样式修改(空白、格式、缺少分号等)",
-    "title": "Styles"
+    "title": "Styles",
+    "emoji": ":lipstick:"
   },
   "refactor": {
     "description": "既不修复bug也不添加新功能的更改",
-    "title": "Code Refactoring"
+    "title": "Code Refactoring",
+    "emoji": ":art:"
   },
   "perf": {
     "description": "性能优化",
-    "title": "Performance Improvements"
+    "title": "Performance Improvements",
+    "emoji": ":racehorse:"
   },
   "test": {
     "description": "增加测试",
-    "title": "Tests"
+    "title": "Tests",
+    "emoji": ":white_check_mark:"
   },
   "build": {
     "description": "影响构建系统或外部依赖项的更改(示例范围:gulp、broccoli、npm)",
-    "title": "Builds"
+    "title": "Builds",
+    "emoji": ":hammer:"
   },
   "ci": {
     "description": "对CI配置文件和脚本的更改(示例范围:Travis, Circle, BrowserStack, SauceLabs)",
-    "title": "Continuous Integrations"
+    "title": "Continuous Integrations",
+    "emoji": ":green_heart:"
   },
   "chore": {
     "description": "除src目录或测试文件以外的修改",
-    "title": "Chores"
+    "title": "Chores",
+    "emoji": ":bookmark:"
   },
   "revert": {
     "description": "回退历史版本",
-    "title": "Reverts"
+    "title": "Reverts",
+    "emoji": ":checked_flag:"
   },
   "conflict": {
     "description": "修改冲突",
@@ -122,10 +150,6 @@ Part of the [commitizen](https://github.com/commitizen/cz-cli) family. Prompts f
   "font": {
     "description": "字体文件更新",
     "title": "Fonts"
-  },
-  "delete": {
-    "description": "删除文件",
-    "title": "Delete Files"
   },
   "stash": {
     "description": "暂存文件",

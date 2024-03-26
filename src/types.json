@@ -1,47 +1,67 @@
 {
+  "init": {
+    "description": "初始化",
+    "title": "Init",
+    "emoji": "🎉"
+  },
   "feat": {
     "description": "一个新功能",
-    "title": "Features"
+    "title": "Features",
+    "emoji": "✨"
   },
   "fix": {
     "description": "一个bug",
-    "title": "Bug Fixes"
+    "title": "Bug Fixes",
+    "emoji": "🐞"
   },
   "docs": {
     "description": "文档增删改",
-    "title": "Documentation"
+    "title": "Documentation",
+    "emoji": "📃"
+  },
+  "delete": {
+    "description": "删除文件",
+    "title": "Delete Files"
   },
   "style": {
     "description": "样式修改(空白、格式、缺少分号等)",
-    "title": "Styles"
+    "title": "Styles",
+    "emoji": "🌈"
   },
   "refactor": {
     "description": "既不修复bug也不添加新功能的更改",
-    "title": "Code Refactoring"
+    "title": "Code Refactoring",
+    "emoji": "🦄"
   },
   "perf": {
     "description": "性能优化",
-    "title": "Performance Improvements"
+    "title": "Performance Improvements",
+    "emoji": "🎈"
   },
   "test": {
     "description": "增加测试",
-    "title": "Tests"
+    "title": "Tests",
+    "emoji": "🧪"
   },
   "build": {
     "description": "影响构建系统或外部依赖项的更改(示例范围:gulp、broccoli、npm)",
-    "title": "Builds"
+    "title": "Builds",
+    "emoji": "🔧"
   },
   "ci": {
     "description": "对CI配置文件和脚本的更改(示例范围:Travis, Circle, BrowserStack, SauceLabs)",
-    "title": "Continuous Integrations"
+    "title": "Continuous Integrations",
+    "emoji": "🐎"
   },
   "chore": {
     "description": "除src目录或测试文件以外的修改",
-    "title": "Chores"
+    "title": "Chores",
+    "emoji": "🐳"
   },
   "revert": {
     "description": "回退历史版本",
-    "title": "Reverts"
+    "title": "Reverts",
+    "emoji": "↩"
   },
   "conflict": {
     "description": "修改冲突",
@@ -50,10 +70,6 @@
   "font": {
     "description": "字体文件更新",
     "title": "Fonts"
-  },
-  "delete": {
-    "description": "删除文件",
-    "title": "Delete Files"
   },
   "stash": {
     "description": "暂存文件",
