@@ -1,11 +1,11 @@
-# cz-conventional-changelog-zh-emoji(汉化Emoji版)
+# git-cz-zh-emoji(汉化Emoji版)
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/commitizen/cz-conventional-changelog-zh-emoji.svg)](https://greenkeeper.io/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/commitizen/git-cz-zh-emoji.svg)](https://greenkeeper.io/)
 
 Status:
-[![npm version](https://img.shields.io/npm/v/cz-conventional-changelog-zh-emoji.svg?style=flat-square)](https://www.npmjs.org/package/cz-conventional-changelog-zh-emoji)
-[![npm downloads](https://img.shields.io/npm/dm/cz-conventional-changelog-zh-emoji.svg?style=flat-square)](http://npm-stat.com/charts.html?package=cz-conventional-changelog-zh-emoji&from=2015-08-01)
-[![Build Status](https://img.shields.io/travis/commitizen/cz-conventional-changelog-zh-emoji.svg?style=flat-square)](https://travis-ci.org/commitizen/cz-conventional-changelog-zh-emoji)
+[![npm version](https://img.shields.io/npm/v/git-cz-zh-emoji.svg?style=flat-square)](https://www.npmjs.org/package/git-cz-zh-emoji)
+[![npm downloads](https://img.shields.io/npm/dm/git-cz-zh-emoji.svg?style=flat-square)](http://npm-stat.com/charts.html?package=git-cz-zh-emoji&from=2015-08-01)
+[![Build Status](https://img.shields.io/travis/commitizen/git-cz-zh-emoji.svg?style=flat-square)](https://travis-ci.org/commitizen/git-cz-zh-emoji)
 
 > 基于`cz-conventional-changelog-zh`的基础修改的中文版，并扩展了一些日常工作中需要用到的提交类型
 
@@ -14,7 +14,7 @@ Part of the [commitizen](https://github.com/commitizen/cz-cli) family. Prompts f
 ## Install
 
 ```
-yarn global add cz-conventional-changelog-zh-emoji
+pnpm add git-cz-zh-emoji -g
 ```
 
 
@@ -22,12 +22,12 @@ yarn global add cz-conventional-changelog-zh-emoji
 
 ### 全局
 ```
-echo '{ "path": "cz-conventional-changelog-zh-emoji" }' > ~/.czrc 
+echo '{ "path": "git-cz-zh-emoji" }' > ~/.czrc 
 ```
 
 ### package.json
 
-与 commitizen 一样，您可以通过 `package.json` 的`config.commitizen`关键字来配置`cz-conventional-changelog-zh-emoji`。
+与 commitizen 一样，您可以通过 `package.json` 的`config.commitizen`关键字来配置`git-cz-zh-emoji`。
 
 ```json5
 {
@@ -38,7 +38,7 @@ echo '{ "path": "cz-conventional-changelog-zh-emoji" }' > ~/.czrc
     },
     "config": {
         "commitizen": {
-            "path": "cz-conventional-changelog-zh-emoji", // 如有问题可以设置此路径:./node_modules/cz-conventional-changelog-zh-emoji
+            "path": "git-cz-zh-emoji", // 如有问题可以设置此路径:./node_modules/git-cz-zh-emoji
             "disableScopeLowerCase": false,
             "disableSubjectLowerCase": false,
             "maxHeaderWidth": 100,
@@ -83,65 +83,69 @@ echo '{ "path": "cz-conventional-changelog-zh-emoji" }' > ~/.czrc
 
 ```
 {
+  "init": {
+    "description": "初始化",
+    "title": "Init",
+    "emoji": "🎉"
+  },
   "feat": {
     "description": "一个新功能",
     "title": "Features",
-    "emoji": ":sparkles:"
+    "emoji": "✨"
   },
   "fix": {
     "description": "一个bug",
     "title": "Bug Fixes",
-    "emoji": ":bug:"
+    "emoji": "🐞"
   },
   "docs": {
     "description": "文档增删改",
     "title": "Documentation",
-    "emoji": ":pencil:"
+    "emoji": "📃"
   },
   "delete": {
     "description": "删除文件",
-    "title": "Delete Files",
-    "emoji": ":fire:"
+    "title": "Delete Files"
   },
   "style": {
     "description": "样式修改(空白、格式、缺少分号等)",
     "title": "Styles",
-    "emoji": ":lipstick:"
+    "emoji": "🌈"
   },
   "refactor": {
     "description": "既不修复bug也不添加新功能的更改",
     "title": "Code Refactoring",
-    "emoji": ":art:"
+    "emoji": "🦄"
   },
   "perf": {
     "description": "性能优化",
     "title": "Performance Improvements",
-    "emoji": ":racehorse:"
+    "emoji": "🎈"
   },
   "test": {
     "description": "增加测试",
     "title": "Tests",
-    "emoji": ":white_check_mark:"
+    "emoji": "🧪"
   },
   "build": {
     "description": "影响构建系统或外部依赖项的更改(示例范围:gulp、broccoli、npm)",
     "title": "Builds",
-    "emoji": ":hammer:"
+    "emoji": "🔧"
   },
   "ci": {
     "description": "对CI配置文件和脚本的更改(示例范围:Travis, Circle, BrowserStack, SauceLabs)",
     "title": "Continuous Integrations",
-    "emoji": ":green_heart:"
+    "emoji": "🐎"
   },
   "chore": {
     "description": "除src目录或测试文件以外的修改",
     "title": "Chores",
-    "emoji": ":bookmark:"
+    "emoji": "🐳"
   },
   "revert": {
     "description": "回退历史版本",
     "title": "Reverts",
-    "emoji": ":checked_flag:"
+    "emoji": "↩"
   },
   "conflict": {
     "description": "修改冲突",
